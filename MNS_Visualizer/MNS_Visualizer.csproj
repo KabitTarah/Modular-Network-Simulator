@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4B214F3-23D4-4224-BCDA-B66148BA344D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MNS_Visualizer</RootNamespace>
+    <AssemblyName>MNS_Visualizer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Presentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ILocation\Location.csproj">
+      <Project>{252122A4-FCC5-4A26-B990-EBB79BE0F977}</Project>
+      <Name>ILocation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MNS_Core\MNS_Core.csproj">
+      <Project>{AD2390A4-8126-46A2-8E74-19FB204A2F99}</Project>
+      <Name>MNS_Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MNS_GraphicsLib\MNS_GraphicsLib.csproj">
+      <Project>{0BF9119E-6141-433B-A9AE-DB7F4446E5F2}</Project>
+      <Name>MNS_GraphicsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MNS_Interfaces\MNS_Interfaces.csproj">
+      <Project>{7B30ACC8-70A2-4204-B4D7-F96ECD65230C}</Project>
+      <Name>MNS_Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MNS_Reporting\MNS_Reporting.csproj">
+      <Project>{7C61AD4D-A3FC-4FD2-8BF8-0B72C22A921D}</Project>
+      <Name>MNS_Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PEQ\PEQ.csproj">
+      <Project>{EB683260-8043-43FA-985E-47B309E26900}</Project>
+      <Name>PEQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StopWatch\StopWatch.csproj">
+      <Project>{7AA19794-86F4-4340-852A-5A301E4847B8}</Project>
+      <Name>StopWatch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_icons\go.png" />
+    <EmbeddedResource Include="_icons\go_forward.png" />
+    <EmbeddedResource Include="_icons\next_track.png" />
+    <EmbeddedResource Include="_icons\pause.png" />
+    <EmbeddedResource Include="_icons\play.png" />
+    <EmbeddedResource Include="_icons\previous_record.png" />
+    <EmbeddedResource Include="_icons\save.png" />
+    <EmbeddedResource Include="_icons\stop.png" />
+    <EmbeddedResource Include="_icons\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_icons\refresh.png" />
+    <Content Include="_icons\save_text.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

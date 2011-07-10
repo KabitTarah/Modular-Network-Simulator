@@ -1,0 +1,15 @@
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_Core.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_Core.pdb
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\Location.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_GraphicsLib.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_Interfaces.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_Reporting.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\PriorityQueue.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_Interfaces.pdb
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_Reporting.pdb
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\PriorityQueue.pdb
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\MNS_GraphicsLib.pdb
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\bin\Release\Location.pdb
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\obj\Release\MNS_Core.dll
+C:\Documents and Settings\tamayote\Modular-Network-Simulator\MNS_Core\obj\Release\MNS_Core.pdb
