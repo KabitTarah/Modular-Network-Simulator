@@ -28,8 +28,8 @@ IDeployer:		Chooses a module implementing the IDeployer interface. The built in 
 			"RandomDeployer" distributes nodes randomly (with padding settable). "SpiralDeployer"
 			implements an Archimedean Spiral deployment (see 
 			http://en.wikipedia.org/wiki/Archimedean_spiral). The "PEQTestDeployer" is described further in
-			thesis.pdf. "GridDeployer" sets up nodes in a grid. Only RandomDeployer and PEQTestDeployer uses
-			a random variable to determine node placement.
+			thesis.pdf. "GridDeployer" sets up nodes in a grid. Only RandomDeployer and PEQTestDeployer
+			uses a random variable to determine node placement.
 INodeFactory:		Chooses a module implementing the INodeFactory interface. This is the core routing process for
 			the nodes. Two built-in node protocols are "FloodingQueryNode" which is an overly simple test
 			protocol implemented without much refinement. "PEQNodeFactory" creates nodes using the PEQ
