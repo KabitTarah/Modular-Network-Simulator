@@ -2,33 +2,42 @@ Modular Network Simulator (v1.0)
 
 Version 1.0 of the MNSim concludes the Masters Thesis for Thomas E. Tamayo. (See "Docs/thesis.pdf").
 
-Full binaries are found in "MNS_Visualizer\bin\Release". Running MNS_Visualizer.exe brings up the GUI. A simple overview of set-up tabs:
+Full binaries are found in "MNS_Visualizer\bin\Release". Running MNS_Visualizer.exe brings up the GUI. A simple
+overview of set-up tabs:
 
 DLLs: 			Load new DLL Modules that implement the interfaces described in this project.
 File: 			Not implemented.
-Run:  			Run simulation after configuration is complete. The checkbox "Application Sets Sink Node?" asks whether the Visualizer App sets 
-			the sink or whether it is set by the IApplicationEventGenerator or INodeFactory. The checkbox "Randomized Sink Node" asks 
-			whether the sink should be chosen randomly or whether the sink and event should be placed at the two furthest nodes.
+Run:  			Run simulation after configuration is complete. The checkbox "Application Sets Sink Node?" asks
+			whether the Visualizer App sets the sink or whether it is set by the IApplicationEventGenerator
+			or INodeFactory. The checkbox "Randomized Sink Node" asks whether the sink should be chosen
+			randomly or whether the sink and event should be placed at the two furthest nodes.
 Statistics: 		Shows the closest node ID clicked on the field. All other stats are outputted to file.
 IO:			Chooses the output location and tag for output files.
-IRandomizerFactory: 	Chooses a module implementing the IRandomizerFactory interface. Mersenne Twisters are provided. A specific seed value can be 
-			set to re-run a known simulation. After running a simulation, the Seed value will be filled with the seed used for simulation.
-ILocation:		XYDoubleLocation should be used unless a new module is created. New modules may not work correctly for this interface type.
-			The field coordinates can be set in meters.
+IRandomizerFactory: 	Chooses a module implementing the IRandomizerFactory interface. Mersenne Twisters are provided.
+			A specific seed value can be set to re-run a known simulation. After running a simulation, the
+			Seed value will be filled with the seed used for simulation.
+ILocation:		XYDoubleLocation should be used unless a new module is created. New modules may not work
+			correctly for this interface type. The field coordinates can be set in meters.
 IApplicationEventGenerator:
-			Chooses a module implementing the IApplicationEventGenerator interface. "NoEvent," "FQN_RandomDetectionEventGenerator,"
-			"PEQRandomDetectionEventGenerator," and "PEQTestApplication" are built-in modules. These can be configured when selected.
-			The PEQTestApplication is the event used in Boukerche et al (see thesis.pdf) and corresponds to the IDeployer "PEQTestDeployer."
-IDeployer:		Chooses a module implementing the IDeployer interface. The built in deployers are: "RandomDeployer" distributes nodes randomly 
-			(with padding settable). "SpiralDeployer" implements an Archimedean Spiral deployment (see 
-			http://en.wikipedia.org/wiki/Archimedean_spiral). The "PEQTestDeployer" is described further in thesis.pdf. "GridDeployer" 
-			sets up nodes in a grid. Only RandomDeployer and PEQTestDeployer uses a random variable to determine node placement.
-INodeFactory:		Chooses a module implementing the INodeFactory interface. This is the core routing process for the nodes. Two built-in node
-			protocols are "FloodingQueryNode" which is an overly simple test protocol implemented without much refinement. "PEQNodeFactory" 
-			creates nodes using the PEQ protocol as defined by Boukerche et al. (see thesis.pdf).
-IPhysicalProcessor:	Chooses a module implementing the IPhysicalProcessor interface. This covers the Physical Layer (L1) and some of the Data Link 
-			or Modem layer (L2). One built-in module is available, "BasicUWAPhysicalProcessor" which implements a basic radio range with
-			the properties of Underwater Acoustics (settable in the module).
+			Chooses a module implementing the IApplicationEventGenerator interface. "NoEvent," 
+			"FQN_RandomDetectionEventGenerator," "PEQRandomDetectionEventGenerator," and
+			"PEQTestApplication" are built-in modules. These can be configured when selected. The
+			PEQTestApplication is the event used in Boukerche et al (see thesis.pdf) and corresponds to the
+			IDeployer "PEQTestDeployer."
+IDeployer:		Chooses a module implementing the IDeployer interface. The built in deployers are:
+			"RandomDeployer" distributes nodes randomly (with padding settable). "SpiralDeployer"
+			implements an Archimedean Spiral deployment (see 
+			http://en.wikipedia.org/wiki/Archimedean_spiral). The "PEQTestDeployer" is described further in
+			thesis.pdf. "GridDeployer" sets up nodes in a grid. Only RandomDeployer and PEQTestDeployer uses
+			a random variable to determine node placement.
+INodeFactory:		Chooses a module implementing the INodeFactory interface. This is the core routing process for
+			the nodes. Two built-in node protocols are "FloodingQueryNode" which is an overly simple test
+			protocol implemented without much refinement. "PEQNodeFactory" creates nodes using the PEQ
+			protocol as defined by Boukerche et al. (see thesis.pdf).
+IPhysicalProcessor:	Chooses a module implementing the IPhysicalProcessor interface. This covers the Physical Layer
+			(L1) and some of the Data Link or Modem layer (L2). One built-in module is available,
+			"BasicUWAPhysicalProcessor" which implements a basic radio range with the properties of
+			Underwater Acoustics (settable in the module).
 
 Version 1.0 is complete.
 Version 2.0 is planned. See Docs/thesis.pdf Section 6.2 for more information.
